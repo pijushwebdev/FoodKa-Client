@@ -3,7 +3,7 @@ import React from 'react';
 const HomeBanner = () => {
     return (
         <div className='mb-10' style={{ backgroundImage: `url("https://i.ibb.co/TTpnhbj/food.png")`, backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', height: '100vh', borderRadius:'10px'}}>
-            <div className='w-1/2 h-full flex flex-col justify-center p-4'>
+            <div className='w-full lg:w-1/2 md:w-3/4 h-full flex flex-col justify-center p-4'>
                 <p className='text-pink-500'><small>#cooking recipe</small></p>
                 <h1 className='text-6xl text-pink-400 font-bold my-4'>Simple way to find yammy recipes</h1>
                 <p className='text-stone-300 font-semibold my-3'>Food is one of the basic necessities of life. Food contains nutrients—substances essential

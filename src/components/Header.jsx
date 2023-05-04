@@ -12,7 +12,7 @@ const Header = () => {
 
             <div className='flex justify-end items-center text-center py-2'>
                 <ActiveLink className='mr-4' to='/'><button>Home</button></ActiveLink>
-                <ActiveLink className='mr-4' to='/orders'><button>Blog</button></ActiveLink>
+                <ActiveLink className='mr-4' to='/blog'><button>Blog</button></ActiveLink>
                 <ActiveLink className='mr-4' to='/profile'><button>Profile</button></ActiveLink>
 
 

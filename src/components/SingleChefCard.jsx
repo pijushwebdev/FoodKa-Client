@@ -6,7 +6,7 @@ const SingleChefCard = ({ chefs }) => {
     const { id, picture, name, experience, recipes, likes, bio, recipe_id } = chefs;
 
     return (
-        <div className='mb-10'>
+        <div className='mb-10 flex justify-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img className='h-72' src={picture} alt="chefs" /></figure>
                 <div className="card-body">
