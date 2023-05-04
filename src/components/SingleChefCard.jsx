@@ -2,13 +2,21 @@ import React from 'react';
 import { FaThumbsUp } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+
+import LazyLoad from 'react-lazy-load';
+
 const SingleChefCard = ({ chefs }) => {
     const { id, picture, name, experience, recipes, likes, bio, recipe_id } = chefs;
 
     return (
         <div className='mb-10 flex justify-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img className='h-72' src={picture} alt="chefs" /></figure>
+                <figure>
+                    <LazyLoad>
+                        <img className='h-72' src={picture} alt="chefs" />
+                    </LazyLoad>
+                    
+                </figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {name}
