@@ -19,7 +19,7 @@ const SingleChefCard = ({ chefs }) => {
                         <div className="badge badge-outline">Recipe: {recipes}</div>
                         <div className="badge badge-outline"><FaThumbsUp /> <span className='ml-2'>{likes}</span></div>
                     </div>
-                    <Link to={`/chef-details/${id}`}>
+                    <Link to={`/recipes/${recipe_id}`}>
                         <button className='bg-pink-500 w-full text-slate-200 font-semibold py-2 rounded-md hover:bg-pink-600'>View Recipe</button>
                     </Link>
 

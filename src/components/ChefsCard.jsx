@@ -6,9 +6,10 @@ const ChefsCard = () => {
     const [allChefs, setAllChefs] = useState([]);
 
     useEffect( () => {
-        fetch('allchefs.json')
+        fetch('http://localhost:5000/allchefs')
         .then(res => res.json())
         .then(data => setAllChefs(data))
+        .catch(error => console.log(error.message))
     }, [])
 
     return (

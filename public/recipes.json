@@ -1,6 +1,8 @@
 [
     {
         "recipe_id": "1001",
+        "unique_id": 11,
+        "favorite" : false,
         "recipe_name": "Spaghetti Carbonara",
         "ingredients": [
             "spaghetti",
@@ -14,6 +16,8 @@
     },
     {
         "recipe_id": "1001",
+        "unique_id": 12,
+        "favorite" : false,
         "recipe_name": "Beef Stroganoff",
         "ingredients": [
             "beef tenderloin",
@@ -27,6 +31,8 @@
     },
     {
         "recipe_id": "1001",
+        "unique_id": 13,
+        "favorite" : false,
         "recipe_name": "Chicken Parmesan",
         "ingredients": [
             "chicken breasts",
@@ -40,6 +46,8 @@
     },
     {
         "recipe_id": "1002",
+        "unique_id": 14,
+        "favorite" : true,
         "recipe_name": "Beef and Broccoli Stir-Fry",
         "ingredients": [
             "beef sirloin",
@@ -53,6 +61,8 @@
     },
     {
         "recipe_id": "1002",
+        "unique_id": 15,
+        "favorite" : false,
         "recipe_name": "Shrimp Scampi",
         "ingredients": [
             "shrimp",
@@ -66,6 +76,8 @@
     },
     {
         "recipe_id": "1002",
+        "unique_id": 16,
+        "favorite" : true,
         "recipe_name": "Grilled Salmon",
         "ingredients": [
             "salmon fillets",
@@ -79,6 +91,8 @@
     },
     {
         "recipe_id": "1003",
+        "unique_id": 17,
+        "favorite" : false,
         "recipe_name": "Beef Chili",
         "ingredients": [
             "ground beef",
@@ -92,6 +106,8 @@
     },
     {
         "recipe_id": "1003",
+        "unique_id": 18,
+        "favorite" : true,
         "recipe_name": "Chicken Fajitas",
         "ingredients": [
             "chicken breasts",
@@ -105,6 +121,8 @@
     },
     {
         "recipe_id": "1003",
+        "unique_id": 19,
+        "favorite" : false,
         "recipe_name": "Pesto Pasta",
         "ingredients": [
             "pasta",
@@ -118,6 +136,8 @@
     },
     {
         "recipe_id": "1004",
+        "unique_id": 20,
+        "favorite" : false,
         "recipe_name": "Lamb Chops",
         "ingredients": [
             "lamb chops",
@@ -131,6 +151,8 @@
     },
     {
         "recipe_id": "1004",
+        "unique_id": 21,
+        "favorite" : true,
         "recipe_name": "Spinach and Feta Stuffed Chicken",
         "ingredients": [
             "chicken breasts",
@@ -144,6 +166,8 @@
     },
     {
         "recipe_id": "1004",
+        "unique_id": 22,
+        "favorite" : false,
         "recipe_name": "Pork Tenderloin",
         "ingredients": [
             "pork tenderloin",
@@ -157,6 +181,8 @@
     },
     {
         "recipe_id": "1005",
+        "unique_id": 23,
+        "favorite" : false,
         "recipe_name": "Shrimp Scampi",
         "ingredients": [
             "shrimp",
@@ -170,6 +196,8 @@
     },
     {
         "recipe_id": "1005",
+        "unique_id": 24,
+        "favorite" : false,
         "recipe_name": "Vegetable Stir-Fry",
         "ingredients": [
             "broccoli",
@@ -183,6 +211,8 @@
     },
     {
         "recipe_id": "1005",
+        "unique_id": 25,
+        "favorite" : false,
         "recipe_name": "Beef Stroganoff",
         "ingredients": [
             "beef sirloin",
@@ -196,6 +226,8 @@
     },
     {
         "recipe_id": "1006",
+        "unique_id": 26,
+        "favorite" : false,
         "recipe_name": "Tomato Soup",
         "ingredients": [
             "tomatoes",
@@ -209,6 +241,8 @@
     },
     {
         "recipe_id": "1006",
+        "unique_id": 27,
+        "favorite" : false,
         "recipe_name": "Honey Mustard Salmon",
         "ingredients": [
             "salmon fillets",
@@ -222,6 +256,8 @@
     },
     {
         "recipe_id": "1006",
+        "unique_id": 28,
+        "favorite" : true,
         "recipe_name": "Pulled Pork",
         "ingredients": [
             "pork shoulder",
