@@ -9,7 +9,7 @@ const ChefsCard = () => {
         fetch('https://foodka-server.vercel.app/allchefs')
         .then(res => res.json())
         .then(data => setAllChefs(data))
-        .catch(error => console.log(error.message))
+        .catch(error => toast.error(error.message))
     }, [])
 
     return (

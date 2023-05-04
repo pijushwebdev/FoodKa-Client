@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user?.photoURL);
+    // console.log(user?.photoURL);
 
     return (
         <div className='grid grid-cols-2 py-3'>
