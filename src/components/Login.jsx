@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../authProvider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { sendPasswordResetEmail} from "firebase/auth";
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [user, setUser] = useState(null);
@@ -16,10 +17,11 @@ const Login = () => {
             .then(result => {
                 const signedUser = result.user;
                 setUser(signedUser);
+                navigate('/');
+                toast.success('Successfully Login')
             })
             .catch(error => {
-                
-                console.log(error.message)
+                toast.error(error.message)
             })
     }
 
@@ -28,9 +30,12 @@ const Login = () => {
             .then(result => {
                 const signedUser = result.user;
                 setUser(signedUser);
+                navigate('/');
+                toast.success('Successfully Login')
+                
             })
             .catch(error => {
-                console.log(error.message)
+                toast.error(error.message)
 
             })
     }
@@ -44,28 +49,29 @@ const Login = () => {
 
         signIn(email, password)
             .then(res => {
-                setError('');
+                
                 const userEP = res.user;
-                setSuccess('SignIn success...');
-                // setUser(userEP);
+                
+                setUser(userEP);
+                toast.success('Successfully Login')
                 // console.log(userEP);
                 navigate('/');
 
             })
-            .catch(err => setError(err.message))
+            .catch(error => toast.error(error.message))
     }
 
     const handleResetPassword = event => {
         const email = emailRef.current.value;
         if (!email) {
-            alert('please provide email');
+            toast.error('please provide email');
         }
         sendPasswordResetEmail(auth, email)
             .then(() => {
-                alert('a reset mail has been sent to your mail');
+                toast.error('a reset mail has been sent to your mail');
 
             })
-            .catch(err => setError(err.message))
+            .catch(error => toast.error(error.message))
     }
 
 

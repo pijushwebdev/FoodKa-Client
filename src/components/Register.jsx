@@ -1,18 +1,22 @@
 import React, { useContext } from 'react';
 import { sendEmailVerification, updateProfile } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { AuthContext } from '../authProvider/AuthProvider';
 import { validPassword, validEmail } from './RegEx';
+import { toast } from 'react-toastify';
+
 
 const Register = () => {
 
     const { user, createUser } = useContext(AuthContext);
 
-    const verifyUserEmail = (email) => {
-        sendEmailVerification(email);
-        alert('A verification mail has been sent to your mail');
+    
 
-    }
+    // const verifyUserEmail = (email) => {
+    //     sendEmailVerification(email);
+    //     toast.success('A verification mail has been sent to your mail');
+
+    // }
     const updateUserProfile = (user, name,photoUrl) => {
         updateProfile(user, {
             displayName: name,
@@ -30,35 +34,28 @@ const Register = () => {
         const password = form.password.value;
         const name = form.name.value;
         const photoURL = form.photo.value;
-        
+
 
         if (!validEmail.test(email)) {
-
+            toast.error("Email not valid")
             return;
-        } else {
-
-
-        }
+        } 
         if (!validPassword.test(password)) {
-
+            toast.error("Password not valid")
             return;
-        } else {
-
-
         }
 
         createUser(email, password)
             .then(res => {
                 const loggedUser = res.user;
                 // console.log(loggedUser);
-
-
                 form.reset();
-
-                verifyUserEmail(loggedUser);
+                // verifyUserEmail(loggedUser);
                 updateUserProfile(loggedUser, name, photoURL)
+                toast.success("Successfully created user");
+                
             })
-            .catch(error => console.log(error.message))
+            .catch(error => toast.error(error.message))
 
     }
     return (
