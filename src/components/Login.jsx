@@ -1,12 +1,18 @@
 import React, { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../authProvider/AuthProvider';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { sendPasswordResetEmail} from "firebase/auth";
 import { toast } from 'react-toastify';
 
 const Login = () => {
     const [user, setUser] = useState(null);
     const emailRef = useRef();
+
+    const location = useLocation();
+
+
+    const from = location.state?.from?.pathname || '/';
+
 
     const { signIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -17,7 +23,7 @@ const Login = () => {
             .then(result => {
                 const signedUser = result.user;
                 setUser(signedUser);
-                navigate('/');
+                navigate(from, {replace: true});
                 toast.success('Successfully Login')
             })
             .catch(error => {
@@ -30,7 +36,7 @@ const Login = () => {
             .then(result => {
                 const signedUser = result.user;
                 setUser(signedUser);
-                navigate('/');
+                navigate(from, {replace: true});
                 toast.success('Successfully Login')
                 
             })
@@ -55,7 +61,7 @@ const Login = () => {
                 setUser(userEP);
                 toast.success('Successfully Login')
                 // console.log(userEP);
-                navigate('/');
+                navigate(from, {replace: true});
 
             })
             .catch(error => toast.error(error.message))

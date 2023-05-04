@@ -2,12 +2,6 @@ import React from 'react';
 
 const ChefGellary = () => {
 
-    
-
-
-
-
-
     return (
         <div>
             <h1 className='my-10 font-bold text-4xl text-center'>Chef Gallery</h1>
