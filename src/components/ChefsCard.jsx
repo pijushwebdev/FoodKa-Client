@@ -6,7 +6,7 @@ const ChefsCard = () => {
     const [allChefs, setAllChefs] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/allchefs')
+        fetch('https://foodka-server.vercel.app/allchefs')
         .then(res => res.json())
         .then(data => setAllChefs(data))
         .catch(error => console.log(error.message))

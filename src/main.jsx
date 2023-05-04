@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path:'recipes/:id',
         element:<PrivateRoutes><ChefDetails></ChefDetails></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/recipes/${params.id}`)
+        loader: ({params}) => fetch(`https://foodka-server.vercel.app/recipes/${params.id}`)
       },
       {
         path: '/login',

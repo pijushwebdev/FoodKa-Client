@@ -13,7 +13,7 @@ const ChefDetails = () => {
     // console.log(recipeData);  ok
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allchefs/${id}`)
+        fetch(`https://foodka-server.vercel.app/allchefs/${id}`)
             .then(res => res.json())
             .then(data => setChef(data))
     }, [])
