@@ -14,7 +14,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
 
 
-    const { signIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
+    const { signIn, signInWithGoogle, signInWithGitHub, passwordReset } = useContext(AuthContext);
     const navigate = useNavigate();
 
 
@@ -72,12 +72,10 @@ const Login = () => {
         if (!email) {
             toast.error('please provide email');
         }
-        sendPasswordResetEmail(auth, email)
+        passwordReset(email)
             .then(() => {
                 toast.error('a reset mail has been sent to your mail');
-
             })
-            .catch(error => toast.error(error.message))
     }
 
 
