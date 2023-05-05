@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { sendEmailVerification, updateProfile } from 'firebase/auth';
-import { Link} from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { AuthContext } from '../authProvider/AuthProvider';
 import { validPassword, validEmail } from './RegEx';
 import { toast } from 'react-toastify';
@@ -8,7 +8,10 @@ import { toast } from 'react-toastify';
 
 const Register = () => {
 
-    const { user, createUser } = useContext(AuthContext);
+    const { user, createUser , logOut} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
 
     
 
@@ -53,6 +56,8 @@ const Register = () => {
                 // verifyUserEmail(loggedUser);
                 updateUserProfile(loggedUser, name, photoURL)
                 toast.success("Successfully created user");
+                logOut();
+                navigate('/login');
                 
             })
             .catch(error => toast.error(error.message))
